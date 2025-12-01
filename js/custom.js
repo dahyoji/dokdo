@@ -27,19 +27,19 @@ $(function () {
         main_customer_slide.slideNext();
     });
 
-    $('.main_customer .play').on('click', function () {
-        main_customer_slide.autoplay.start();
-    });
+    
 
     let sw = true;
+    $('.main_customer .play').on('click', function () {
     if (sw) {
         main_customer_slide.autoplay.start();
         $(this).addClass('on');
     } else {
-        main_customer_slide.autoplay.start();
+        main_customer_slide.autoplay.pause();
         $(this).removeClass('on');
     }
     sw = !sw;
+});
 });
 
 
@@ -59,7 +59,7 @@ $(function () {
 $(function () {
     const lenis = new Lenis({
         autoRaf: true,
-        direction: 2,
+        duration: 2,
     });
 });
 
